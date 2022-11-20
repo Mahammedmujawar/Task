@@ -1,0 +1,49 @@
+#body1
+{
+border: 10px;
+margin: 10px;
+padding: 10px;
+background-color: blue;
+
+}
+
+form input
+{
+ background: #ffff97;
+ padding: 5px 5px 10px 20px;
+ border-radius: 10px;
+ font-size: 20px;
+}
+#btn1
+{
+  color: white;  
+
+width:124px;
+background-color: green;
+border-radius: 9px;
+    
+}
+#btn1:hover{
+
+
+background-color:orange;
+
+}
+
+#val{
+    color: white;
+    width:124px;
+background-color: yellowgreen;
+border-radius: 9px;
+
+}
+#val:hover{
+    background-color: brown;
+}
+
+center table
+{
+    background: rgba(0,0,0,0,25);
+    color: #208baf;
+    margin: 0px 300px;
+}

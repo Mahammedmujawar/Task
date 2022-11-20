@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mahammed task</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+
+    function val(input)
+
+    {
+      var input_field = document.getElementById("Name");
+      input_field.addEventListener('input',function()
+      {
+        if(input_field.value.split("").length>2)
+        {
+          alert("You should input only 2 words");
+        }
+      });
+       
+     
+  
+    }
+    
+  </script>
+</head>
+<body style="background-color: aqua;">
+
+<div class="container" id="displaynone" >
+  <h2>Loan Page</h2>
+  <form action="" onsubmit=" return val()">
+    <div class="form-group">
+        <label for="Name">Full Name:</label>
+        <input type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name" required>
+        <span id="spnErrror" style= "color:red; display: none">validate char and spaces</span>
+      </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="Pan">Pan No:</label>
+        <input type="text" class="form-control" MaxLength="10" id="textPanNo" onblur="ValidatePAN(this);" placeholder="ABCDE1234F" name="Pan" required>
+    </div>
+    <div class="form-group">
+        <label for="loan">Loan Amount:</label>
+        <input type="number" class="form-control" id="loanamt" placeholder="Enter Loan Amount" MaxLength="9" name="Loan" required>
+    </div>
+    <button id="btn1" type=""   onclick="generateOTP()">Submit</button>
+</div>
+  </form>
+</div>
+
+<div class="container" id="displayform">
+  <h1 id="appendname"></h1>
+  <h3>Validate Otp</h3>
+    <form action="" >
+        <input type="text" id="otp" placeholder="Enter the otp"> 
+        <button type="submit" id="val" onclick="checkOTP()">Validate Otp</button>
+    </form>
+</div>
+
+</body>
+<script src="app.js"></script>
+</html>
